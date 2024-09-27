@@ -1,0 +1,1 @@
+<h1>Example Two - Accessible to Admin Only</h1>
