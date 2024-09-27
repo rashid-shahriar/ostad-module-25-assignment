@@ -19,9 +19,11 @@
             </div>
 
             <ul class=" flex items-center gap-4">
-                <li><a href="{{ route('example-one') }}">Example One</a></li>
+
+                @if(auth()->check() && auth()->user()->role === 'user')
                 <li><a href="{{ route('user.rental.index') }}">History</a></li>
                 <li><a href="{{ route('user.rental.create') }}">Rent a car</a></li>
+                @endif
 
                 @if(auth()->check() && auth()->user()->role === 'admin')
                 <li><a href="{{ route('admin.cars.index') }}">Cars</a></li>
